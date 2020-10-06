@@ -8,11 +8,19 @@ main.style.width="100vw"
 main.style.flexWrap="wrap"
 main.style.justifyContent="space-evenly"
 
+const randomColor=()=>{
+    let r= Math.floor(Math.random()*256)
+    let g= Math.floor(Math.random()*256)
+    let b= Math.floor(Math.random()*256)
+    let a= Math.random().toFixed(2)
+    let color= `rgba(${r},${g},${b},${a} )`
+    return color
+}
 
 let uls=document.querySelectorAll(".food-category")
-uls[0].style.backgroundColor="#E5C4AF"
-uls[1].style.backgroundColor="#E8CCF1"
-uls[2].style.backgroundColor="#EEAFAF"
+uls[0].style.backgroundColor=randomColor()
+uls[1].style.backgroundColor=randomColor()
+uls[2].style.backgroundColor=randomColor()
 uls.forEach(ul=>{
     ul.style.width="250px"
     ul.style.padding="30px"
