@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-family: monospace;
+    color: crimson;
+
+}
+
+/* .food-category{
+    width: 25%;
+} */
+
+li{
+    list-style: none;
+}
