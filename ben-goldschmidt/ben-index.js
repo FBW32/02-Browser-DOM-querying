@@ -41,7 +41,7 @@ ulItems.forEach(ulitem => {
     ulitem.style.alignSelf = "center"
     ulitem.style.fontSize = "30px";
     ulitem.style.width = "300px";
-    ulitem.style.borderRadius = "30px";
+    ulitem.style.borderRadius = "30px 0px 30px 30px";
     ulitem.style.padding = "30px 10px 20px 40px";
     ulitem.style.margin = "10px";
 })
@@ -88,10 +88,13 @@ warning.style.textAlign = "center";
 // Select all even allergy-info items. Give the even items a different background color.
 let allergyItems = document.querySelectorAll(".allergy-info");
 console.dir(allergyItems);
-allergyItems.forEach(item => {
-    item.style.backgroundColor = randomColor();
+allergyItems.forEach((item, i) => {
     item.style.margin = "10px";
     item.style.padding = "10px";
+    item.style.borderRadius = "30px";
+    if (i % 2 !== 0) {
+        item.style.backgroundColor = randomColor();
+    }
 })
 
 
@@ -112,7 +115,8 @@ footerDesc.forEach(desc => {
     desc.style.backgroundColor = randomColor();
     desc.style.borderRadius = "50%";
     desc.style.margin = "10px";
-    desc.style.width = "200px"
+    // desc.style.height = "300px";
+    desc.style.width = "300px"
     desc.style.textAlign = "center"
     desc.style.boxSizing = "border-box"
 })
