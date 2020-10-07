@@ -3,6 +3,7 @@ let body1 = document.querySelector("body")
 console.dir(body1)
 body1.style.justifyContent = "center"
 
+
 // Center the text of h1 on the page.
 let h1 = document.querySelector("h1")
 console.dir(h1)
@@ -56,6 +57,7 @@ category.forEach(label => {
     label.style.fontWeight = "bold";
 })
 
+
 // food-item
 let foodItem = document.querySelectorAll(".food-item");
 console.dir(foodItem)
@@ -65,6 +67,15 @@ foodItem.forEach(item => {
 })
 
 
+// Make the allergy-warning appear as a column in the center of the page.
+let allergyWarning = document.querySelector(".allergy-warning");
+console.dir(allergyWarning)
+allergyWarning.style.margin = "0 auto";
+allergyWarning.style.padding = "0";
+allergyWarning.style.justifyContent = "center"
+allergyWarning.style.width = "400px";
+
+
 // Select the warning at the end of the page by its id warning. Select the id without using a querySelector. Change the size and font of the warning.
 // warning
 let warning = document.getElementById("warning");
@@ -72,21 +83,17 @@ warning.style.fontSize = "40px";
 warning.style.color = "red";
 warning.style.textAlign = "center";
 
+
+
 // Select all even allergy-info items. Give the even items a different background color.
 let allergyItems = document.querySelectorAll(".allergy-info");
 console.dir(allergyItems);
 allergyItems.forEach(item => {
     item.style.backgroundColor = randomColor();
-    // item.style.width = "100px";
     item.style.margin = "10px";
     item.style.padding = "10px";
 })
 
-
-// Make the allergy-warning appear as a column in the center of the page.
-let allergyWarning = document.querySelector(".allergy-warning");
-console.dir(allergyWarning)
-allergyWarning.style.justifyContent = "center"
 
 
 let footer = document.querySelector(".footer")
